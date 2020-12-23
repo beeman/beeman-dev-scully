@@ -1147,6 +1147,13 @@
   resolved "https://registry.yarnpkg.com/@ngneat/tailwind/-/tailwind-3.0.6.tgz#6e28638fceb3f49b9273972e8399c81c654c3221"
   integrity sha512-pT05sAhWQw1cQF8H/1MiMajqs8MqJzGKXdYltVTjfDKb+QLHUk18aBHyyJ8bgWkjouediPgl0/Nw2X3HU1LfWA==
 
+"@ngrx/component-store@^10.1.2":
+  version "10.1.2"
+  resolved "https://registry.yarnpkg.com/@ngrx/component-store/-/component-store-10.1.2.tgz#49c6e3d721a483fc97ae12e6a3e45b83245f2f9f"
+  integrity sha512-UuI55Ut1mAzGMX/SLHByOeJfC3hD5Z8+qv7aQTV/iHyMdpSdBpj3O92kPbDCSl+jXWGpjFNi45iY7bfOLZNFaQ==
+  dependencies:
+    tslib "^2.0.0"
+
 "@ngtools/webpack@11.0.5":
   version "11.0.5"
   resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-11.0.5.tgz#9d1abb9f9a5e72c014b5ed3e0c2cefe2a4175b30"

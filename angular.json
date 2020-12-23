@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-tailwind-scully": {
+    "web": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,13 +20,13 @@
         "build": {
           "builder": "@angular-builders/custom-webpack:browser",
           "options": {
-            "outputPath": "dist/angular-tailwind-scully",
+            "outputPath": "dist/web",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": true,
-            "assets": ["src/favicon.ico", "src/assets"],
+            "assets": ["src/favicon.ico", "src/robots.txt", "src/assets"],
             "styles": ["src/styles.css"],
             "scripts": [],
             "customWebpackConfig": {
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-builders/custom-webpack:dev-server",
           "options": {
-            "browserTarget": "angular-tailwind-scully:build"
+            "browserTarget": "web:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-tailwind-scully:build:production"
+              "browserTarget": "web:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-tailwind-scully:build"
+            "browserTarget": "web:build"
           }
         },
         "test": {
@@ -110,16 +110,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular-tailwind-scully:serve"
+            "devServerTarget": "web:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular-tailwind-scully:serve:production"
+              "devServerTarget": "web:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "angular-tailwind-scully"
+  "defaultProject": "web"
 }
