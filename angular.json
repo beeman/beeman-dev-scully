@@ -26,7 +26,12 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": true,
-            "assets": ["src/favicon.ico", "src/robots.txt", "src/assets"],
+            "assets": [
+              "src/CNAME",
+              "src/favicon.ico",
+              "src/robots.txt",
+              "src/assets"
+            ],
             "styles": ["src/styles.css"],
             "scripts": [],
             "customWebpackConfig": {
@@ -87,7 +92,12 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-            "assets": ["src/favicon.ico", "src/assets"],
+            "assets": [
+              "src/CNAME",
+              "src/favicon.ico",
+              "src/robots.txt",
+              "src/assets"
+            ],
             "styles": ["src/styles.css"],
             "scripts": [],
             "customWebpackConfig": {
@@ -117,6 +127,10 @@
               "devServerTarget": "web:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
     }
