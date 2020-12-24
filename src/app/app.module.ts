@@ -36,17 +36,22 @@ const routes: Routes = [
           ),
       },
       {
-        path: 'sponsor',
-        loadChildren: () =>
-          import('./feature/sponsor/sponsor.module').then(
-            (m) => m.SponsorModule
-          ),
-      },
-      {
         path: 'publications',
         loadChildren: () =>
           import('./feature/publications/publications.module').then(
             (m) => m.PublicationsModule
+          ),
+      },
+      {
+        path: 'quotes',
+        loadChildren: () =>
+          import('./feature/quote/quote.module').then((m) => m.QuoteModule),
+      },
+      {
+        path: 'sponsor',
+        loadChildren: () =>
+          import('./feature/sponsor/sponsor.module').then(
+            (m) => m.SponsorModule
           ),
       },
     ],
@@ -56,6 +61,11 @@ const routes: Routes = [
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [AppComponent],
-  imports: [BrowserModule, RouterModule.forRoot(routes), UiModule, ScullyLibModule],
+  imports: [
+    BrowserModule,
+    RouterModule.forRoot(routes),
+    UiModule,
+    ScullyLibModule,
+  ],
 })
 export class AppModule {}
