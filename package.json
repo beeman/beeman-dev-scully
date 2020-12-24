@@ -1,16 +1,19 @@
 {
   "name": "beeman-dev-scully",
   "version": "0.0.0",
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve --hmr",
-    "build": "ng build --prod",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e",
-    "deploy": "ng deploy web --repo=https://github.com/beeman/beeman-dev-scully.git --name=obrero --email=deploy@beesoftlabs.dev"
-  },
   "private": true,
+  "scripts": {
+    "build": "ng build --prod",
+    "predeploy": "yarn build && yarn scully",
+    "deploy": "npx angular-cli-ghpages --dir dist/static --repo=https://github.com/beeman/beeman-dev-scully.git --name=obrero --email=deploy@beesoftlabs.dev",
+    "e2e": "ng e2e",
+    "lint": "ng lint",
+    "ng": "ng",
+    "scully": "scully",
+    "scully:serve": "scully serve",
+    "start": "ng serve --hmr",
+    "test": "ng test"
+  },
   "dependencies": {
     "@angular/animations": "~11.0.5",
     "@angular/common": "~11.0.5",
@@ -22,6 +25,9 @@
     "@angular/router": "~11.0.5",
     "@ngneat/tailwind": "^3.0.6",
     "@ngrx/component-store": "^10.1.2",
+    "@scullyio/init": "^1.0.1",
+    "@scullyio/ng-lib": "^1.0.0",
+    "@scullyio/scully": "^1.0.0",
     "@tailwindcss/forms": "^0.2.1",
     "@tailwindcss/typography": "^0.3.1",
     "rxjs": "~6.6.0",

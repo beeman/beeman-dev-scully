@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   template: `
     <div class="p-4">
       <div class="bg-white dark:bg-gray-800 shadow rounded-md p-4 mb-6">
-        HOME
+        HOME!
       </div>
     </div>
   `,

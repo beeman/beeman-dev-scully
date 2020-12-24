@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { LayoutComponent } from './ui/layout/layout.component';
 import { UiModule } from './ui/ui.module';
+import { ScullyLibModule } from '@scullyio/ng-lib';
 
 const routes: Routes = [
   {
@@ -55,6 +56,6 @@ const routes: Routes = [
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [AppComponent],
-  imports: [BrowserModule, RouterModule.forRoot(routes), UiModule],
+  imports: [BrowserModule, RouterModule.forRoot(routes), UiModule, ScullyLibModule],
 })
 export class AppModule {}
