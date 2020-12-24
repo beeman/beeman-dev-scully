@@ -7,7 +7,7 @@ import { LayoutStore } from './layout.store';
       <div class="h-full">
         <div class="md:grid md:grid-cols-12 h-full">
           <div
-            class="px-3 py-4 md:col-span-3 bg-gray-300 dark:bg-gray-800 shadow"
+            class="px-3 py-4 md:col-span-4 lg:col-span-3 xl:col-span-2 bg-gray-300 dark:bg-gray-800 shadow"
           >
             <div class="flex justify-between items-center md:h-full md:w-full">
               <div
@@ -100,8 +100,12 @@ import { LayoutStore } from './layout.store';
               </div>
             </ng-container>
           </div>
-          <main class="md:col-span-9">
-            <router-outlet></router-outlet>
+          <main
+            class="md:col-span-8 lg:col-span-9 xl:col-span-10 h-full overflow-auto"
+          >
+            <div class="md:container md:mx-auto">
+              <router-outlet></router-outlet>
+            </div>
           </main>
         </div>
       </div>
